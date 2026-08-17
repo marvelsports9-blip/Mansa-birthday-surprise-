@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8d9e8">
+  <title>Happy Birthday Mansi ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="aurora"></div>
+  <div id="particles"></div>
+
+  <button id="musicBtn" class="music-btn" aria-label="Play music">♪</button>
+
+  <main>
+    <section id="hero" class="screen active">
+      <div class="glass hero-card">
+        <div class="tiny">A little surprise for you</div>
+        <div class="butterfly">🦋</div>
+        <h1>Mansa...</h1>
+        <p class="lead">आज तुम्हारे लिए कुछ छोटा-सा नहीं,<br>बल्कि दिल से बनाया हुआ है।</p>
+        <button class="primary" onclick="goTo('welcome')">Open Your Surprise <span>♡</span></button>
+      </div>
+    </section>
+
+    <section id="welcome" class="screen">
+      <div class="glass center-card">
+        <div class="sparkle">✦ ✦ ✦</div>
+        <p class="eyebrow">19 • 08 • 2002</p>
+        <h2>Happy Birthday,<br><em>Mansi</em> 🎂</h2>
+        <p>आज का दिन थोड़ा और खूबसूरत है,<br>क्योंकि आज तुम आई थीं।</p>
+        <button class="primary" onclick="goTo('task1')">चलो, एक छोटा सा game खेलते हैं ✨</button>
+      </div>
+    </section>
+
+    <section id="task1" class="screen">
+      <div class="glass task-card">
+        <span class="step">SURPRISE 01 / 04</span>
+        <h2>एक छोटा सा सवाल 💗</h2>
+        <p>तुम्हें क्या लगता है, तुम्हारी सबसे खास superpower क्या है?</p>
+        <div class="choices">
+          <button onclick="answer(this, true)">🎨 Creativity</button>
+          <button onclick="answer(this, true)">💡 समझदारी</button>
+          <button onclick="answer(this, true)">🤝 दूसरों की मदद करना</button>
+          <button onclick="answer(this, true)">✨ ये सब थोड़ा-थोड़ा</button>
+        </div>
+        <p id="taskHint" class="hint"></p>
+      </div>
+    </section>
+
+    <section id="creative" class="screen">
+      <div class="glass content-card">
+        <span class="step">SURPRISE 02 / 04</span>
+        <div class="big-icon">🎨</div>
+        <h2>For the creative soul</h2>
+        <p>
+          कुछ लोग सिर्फ चीज़ों को देखते हैं,<br>
+          और कुछ लोग उनमें खूबसूरती ढूँढ लेते हैं।
+        </p>
+        <p class="quote">“तुम्हारी creativity सिर्फ paintings में नहीं,<br>तुम्हारे देखने के तरीके में भी है।”</p>
+        <button class="primary" onclick="goTo('photos')">अब memories unlock करो 📸</button>
+      </div>
+    </section>
+
+    <section id="photos" class="screen">
+      <div class="photo-section">
+        <span class="step">SURPRISE 03 / 04</span>
+        <h2>Little pieces of you 📸</h2>
+        <p class="sub">इन चारों में से एक photo पर tap करके अगला surprise खोजो।</p>
+        <div class="polaroids">
+          <button class="polaroid p1" onclick="photoTap(this)">
+            <img src="images/mansi-1.jpg" alt="Mansi photo 1">
+            <span>little moment ✨</span>
+          </button>
+          <button class="polaroid p2" onclick="photoTap(this)">
+            <img src="images/mansi-2.jpg" alt="Mansi photo 2">
+            <span>beautiful smile 🌸</span>
+          </button>
+          <button class="polaroid p3" onclick="photoTap(this)">
+            <img src="images/mansi-3.jpg" alt="Mansi photo 3">
+            <span>creative soul 🎨</span>
+          </button>
+          <button class="polaroid p4" onclick="photoTap(this)">
+            <img src="images/mansi-4.jpg" alt="Mansi photo 4">
+            <span>just you 💫</span>
+          </button>
+        </div>
+        <p id="photoHint" class="hint"></p>
+      </div>
+    </section>
+
+    <section id="krishna" class="screen">
+      <div class="glass content-card">
+        <span class="step">A LITTLE WISH 🦚</span>
+        <div class="peacock">🦚</div>
+        <h2>एक छोटी सी प्रार्थना...</h2>
+        <p>
+          कृष्ण से बस इतनी-सी wish है—
+          तुम्हारी जिंदगी में हमेशा शांति रहे,
+          तुम्हारे चेहरे पर मुस्कान रहे,
+          और तुम्हारी creativity हमेशा यूँ ही खिलती रहे।
+        </p>
+        <button class="primary" onclick="goTo('letter')">एक आखिरी बात पढ़ोगी? 💌</button>
+      </div>
+    </section>
+
+    <section id="letter" class="screen">
+      <div class="glass letter-card">
+        <span class="step">FOR MANSA, WITH FRIENDSHIP 🤝</span>
+        <h2>Dear Mansa,</h2>
+        <div class="letter">
+          <p>
+            तुम्हें birthday wish करना आसान नहीं है, क्योंकि कुछ लोगों के लिए
+            “Happy Birthday” बस दो शब्द होते हैं… लेकिन तुम्हारे लिए थोड़ा
+            extra कहना बनता है।
+          </p>
+          <p>
+            तुम उन लोगों में से हो जिनमें समझदारी और maturity के साथ एक बहुत
+            प्यारी creativity भी है। Chemistry में अपनी जगह बनाना हो या canvas
+            पर कुछ नया बनाना—तुम्हारे अंदर कुछ नया करने की इच्छा हमेशा दिखती है।
+          </p>
+          <p>
+            और सबसे अच्छी बात, तुम दूसरों की मदद करने से पीछे नहीं हटती।
+            शायद तुम्हें इसका एहसास भी न हो, लेकिन तुम्हारी यही छोटी-छोटी
+            बातें तुम्हें खास बनाती हैं।
+          </p>
+          <p>
+            हमारी friendship हमेशा ऐसी ही रहे—simple, genuine और बिना किसी
+            unnecessary drama के। 😄
+          </p>
+          <p class="final-line">
+            बस हमेशा ऐसी ही रहना…<br>
+            <strong>समझदार, creative, helpful और सबसे बढ़कर — खुद जैसी।</strong> 🌸
+          </p>
+        </div>
+        <button class="primary" onclick="finishBirthday()">Final Surprise 🎂</button>
+      </div>
+    </section>
+
+    <section id="final" class="screen">
+      <div class="final-card">
+        <div class="cake">🎂</div>
+        <p class="tiny">ONE LAST THING...</p>
+        <h1>Happy Birthday<br><span>Mansi</span> ❤️</h1>
+        <p class="final-message">
+          May this year bring you beautiful moments,<br>
+          new colours, new dreams and lots of reasons to smile.
+        </p>
+        <div class="signature">— from a friend who wishes you the best ✨</div>
+        <button class="replay" onclick="location.reload()">↻ Replay the surprise</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+*{box-sizing:border-box}
+:root{
+  --pink:#e9a9c6;--rose:#c86b98;--cream:#fff8fb;--ink:#4b3543;
+  --lav:#bca9e8;--glass:rgba(255,255,255,.58);--border:rgba(255,255,255,.8)
+}
+html,body{margin:0;min-height:100%;font-family:Poppins,sans-serif;color:var(--ink)}
+body{
+  min-height:100vh;overflow-x:hidden;
+  background:radial-gradient(circle at 15% 15%,#ffe8f2 0,transparent 32%),
+             radial-gradient(circle at 85% 25%,#e8dcff 0,transparent 34%),
+             linear-gradient(145deg,#fff9fb,#f9eff8 55%,#eee8ff);
+}
+.aurora{position:fixed;inset:-20%;z-index:-2;background:
+ radial-gradient(circle at 35% 55%,rgba(255,170,205,.22),transparent 24%),
+ radial-gradient(circle at 70% 70%,rgba(180,160,240,.2),transparent 28%);
+ filter:blur(25px);animation:drift 12s ease-in-out infinite alternate}
+#particles{position:fixed;inset:0;pointer-events:none;z-index:-1}
+.particle{position:absolute;font-size:13px;opacity:.5;animation:float 7s linear infinite}
+.music-btn{
+ position:fixed;right:18px;top:18px;width:45px;height:45px;border-radius:50%;
+ border:1px solid #fff;background:rgba(255,255,255,.65);backdrop-filter:blur(12px);
+ color:#a34e78;font-size:20px;z-index:20;box-shadow:0 8px 25px rgba(100,50,90,.1)
+}
+.screen{display:none;min-height:100vh;padding:28px 18px;align-items:center;justify-content:center;animation:fade .7s ease}
+.screen.active{display:flex}
+.glass{
+ width:min(680px,100%);background:var(--glass);border:1px solid var(--border);
+ backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+ border-radius:32px;box-shadow:0 25px 70px rgba(94,52,90,.12);padding:42px 28px;text-align:center
+}
+.hero-card{padding:58px 26px}
+.tiny,.eyebrow,.step{letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:#9b6682}
+.butterfly{font-size:58px;margin:14px 0;animation:breath 3s ease-in-out infinite}
+h1,h2{font-family:"Cormorant Garamond",serif;margin:8px 0;color:#573c50}
+h1{font-size:clamp(52px,13vw,88px);line-height:.9}
+h2{font-size:clamp(40px,10vw,64px);line-height:1}
+h2 em{color:#bf6b98;font-style:normal}
+p{line-height:1.8;font-size:15px}.lead{font-size:16px}
+.primary{
+ border:0;border-radius:999px;padding:14px 23px;background:linear-gradient(135deg,#d98daf,#b988c9);
+ color:white;font:600 13px Poppins;letter-spacing:.02em;cursor:pointer;
+ box-shadow:0 12px 28px rgba(177,99,140,.25);transition:.25s;margin-top:18px
+}
+.primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(177,99,140,.32)}
+.sparkle{letter-spacing:15px;color:#c88aa9;margin-bottom:12px}
+.center-card{max-width:620px}
+.task-card{max-width:650px}.choices{display:grid;gap:12px;margin-top:25px}
+.choices button{
+ padding:15px;border:1px solid rgba(190,128,161,.2);border-radius:18px;background:rgba(255,255,255,.65);
+ color:#684d60;font:500 14px Poppins;cursor:pointer;transition:.2s
+}
+.choices button:hover{transform:scale(1.02);background:#fff}
+.hint{min-height:24px;color:#a45d80;font-size:13px}
+.content-card{max-width:650px}.big-icon{font-size:65px;margin:18px}.quote{font-family:"Cormorant Garamond",serif;font-size:23px;color:#81536d}
+.peacock{font-size:70px;margin:8px}
+.photo-section{width:min(900px,100%);text-align:center}.photo-section h2{margin-bottom:3px}
+.sub{margin-top:0}
+.polaroids{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:700px;margin:30px auto 12px}
+.polaroid{
+ background:#fff;padding:10px 10px 28px;border:0;box-shadow:0 18px 35px rgba(85,50,70,.14);
+ cursor:pointer;transition:.35s;transform:rotate(-2deg)
+}
+.polaroid:nth-child(2){transform:rotate(3deg)}.polaroid:nth-child(3){transform:rotate(2deg)}.polaroid:nth-child(4){transform:rotate(-3deg)}
+.polaroid:hover{transform:translateY(-7px) rotate(0);z-index:2}
+.polaroid img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:linear-gradient(135deg,#f7d8e7,#e9e0f7)}
+.polaroid span{display:block;font:600 13px "Cormorant Garamond",serif;margin-top:9px;color:#765567}
+.letter-card{max-width:720px;text-align:left}.letter-card h2{text-align:center}.letter{font-family:"Cormorant Garamond",serif;font-size:20px;line-height:1.55}
+.letter p{font-family:inherit;font-size:20px;line-height:1.55}.final-line{text-align:center;color:#8b5571}
+.letter-card .primary{display:block;margin:22px auto 0}
+.final-card{text-align:center;padding:30px 15px;max-width:750px}
+.cake{font-size:72px;animation:breath 2.4s infinite}
+.final-card h1{font-size:clamp(58px,15vw,105px)}
+.final-card h1 span{color:#c66e99}
+.final-message{font-size:16px}.signature{font-family:"Cormorant Garamond",serif;font-size:21px;margin-top:22px;color:#8d6077}
+.replay{border:0;background:transparent;color:#a96886;margin-top:30px;cursor:pointer;font:500 12px Poppins}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@keyframes float{0%{transform:translateY(105vh) rotate(0);opacity:0}15%{opacity:.5}100%{transform:translateY(-10vh) rotate(360deg);opacity:0}}
+@keyframes breath{50%{transform:scale(1.08) rotate(2deg)}}
+@keyframes drift{to{transform:translate3d(3%, -2%,0) scale(1.06)}}
+@media(max-width:600px){
+ .glass{padding:34px 20px;border-radius:26px}.polaroids{gap:14px}.polaroid{padding:7px 7px 22px}
+ .letter p{font-size:18px}.primary{max-width:100%}
+}
